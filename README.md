@@ -1,7 +1,7 @@
 
 
 # Keyboard-interactive ArubaOS-Switch Collection for Ansible
-[![CI](https://github.com/avajust/kbd_interactive.aosswitch/actions/workflows/ansible-test.yml/badge.svg?branch=main&event=schedule)](https://github.com/avajust/kbd_interactive.aosswitch/actions/workflows/ansible-test.yml)
+[![CI](https://github.com/evajust/kbd_interactive.aosswitch/actions/workflows/ansible-test.yml/badge.svg?branch=main&event=schedule)](https://github.com/evajust/kbd_interactive.aosswitch/actions/workflows/ansible-test.yml)
 <!--[![Codecov](https://codecov.io/gh/evajust/kbd_interactive.aosswitch/branch/main/graph/badge.svg)](https://codecov.io/gh/evajust/kbd_interactive.aosswitch) -->
 
 The Keyboard-interactive ArubaOS-Switch collection includes Ansbile content to help automate the management of ArubaOS-Switch devices that must have **password configuration-control** enabled. This configuration line disables the use of 'password' as an authentication method and doesn't allow ssh remote command execution. This prevents the Ansible's built-in network_cli connection method from being able to manage the device.
