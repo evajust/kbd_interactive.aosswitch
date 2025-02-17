@@ -1,25 +1,10 @@
-# Foo Collection for Ansible
-<!-- Add CI and code coverage badges here. Samples included below. -->
-[![CI](https://github.com/ansible-collections/REPONAMEHERE/workflows/CI/badge.svg?event=push)](https://github.com/ansible-collections/REPONAMEHERE/actions) [![Codecov](https://img.shields.io/codecov/c/github/ansible-collections/REPONAMEHERE)](https://codecov.io/gh/ansible-collections/REPONAMEHERE)
 
-<!-- Describe the collection and why a user would want to use it. What does the collection do? -->
 
-## Our mission
+# Keyboard-interactive ArubaOS-Switch Collection for Ansible
+[![CI](https://github.com/avajust/kbd_interactive.aosswitch/actions/workflows/ansible-test.yml/badge.svg?branch=main&event=schedule)](https://github.com/avajust/kbd_interactive.aosswitch/actions/workflows/ansible-test.yml)
+<!--[![Codecov](https://codecov.io/gh/evajust/kbd_interactive.aosswitch/branch/main/graph/badge.svg)](https://codecov.io/gh/evajust/kbd_interactive.aosswitch) -->
 
-<!-- Put your collection's mission statement in here. Example follows. -->
-
-At the `your collection name`, our mission is to produce and maintain simple, flexible,
-and powerful open-source software tailored to `your collection purpose`.
-
-We welcome members from all skill levels to participate actively in our open, inclusive, and vibrant community.
-Whether you are an expert or just beginning your journey with Ansible and `your collection name`,
-you are encouraged to contribute, share insights, and collaborate with fellow enthusiasts!
-
-## Code of Conduct
-
-We follow the [Ansible Code of Conduct](https://docs.ansible.com/ansible/devel/community/code_of_conduct.html) in all our interactions within this project.
-
-If you encounter abusive behavior, please refer to the [policy violations](https://docs.ansible.com/ansible/devel/community/code_of_conduct.html#policy-violations) section of the Code for information on how to raise a complaint.
+The Keyboard-interactive ArubaOS-Switch collection includes Ansbile content to help automate the management of ArubaOS-Switch devices that must have **password configuration-control** enabled. This configuration line disables the use of 'password' as an authentication method and doesn't allow ssh remote command execution. This prevents the Ansible's built-in network_cli connection method from being able to manage the device.
 
 ## Communication
 
@@ -35,24 +20,6 @@ If your collection is not present on the Ansible forum yet, please check out the
   * [News & Announcements](https://forum.ansible.com/c/news/5): track project-wide announcements including social events. The [Bullhorn newsletter](https://docs.ansible.com/ansible/devel/community/communication.html#the-bullhorn), which is used to announce releases and important changes, can also be found here.
 
 For more information about communication, see the [Ansible communication guide](https://docs.ansible.com/ansible/devel/community/communication.html).
-
-## Contributing to this collection
-
-<!--Describe how the community can contribute to your collection. At a minimum, fill up and include the CONTRIBUTING.md file containing how and where users can create issues to report problems or request features for this collection. List contribution requirements, including preferred workflows and necessary testing, so you can benefit from community PRs. If you are following general Ansible contributor guidelines, you can link to - [Ansible Community Guide](https://docs.ansible.com/ansible/devel/community/index.html). List the current maintainers (contributors with write or higher access to the repository). The following can be included:-->
-
-The content of this collection is made by people like you, a community of individuals collaborating on making the world better through developing automation software.
-
-We are actively accepting new contributors and all types of contributions are very welcome.
-
-Don't know how to start? Refer to the [Ansible community guide](https://docs.ansible.com/ansible/devel/community/index.html)!
-
-Want to submit code changes? Take a look at the [Quick-start development guide](https://docs.ansible.com/ansible/devel/community/create_pr_quick_start.html).
-
-We also use the following guidelines:
-
-* [Collection review checklist](https://docs.ansible.com/ansible/devel/community/collection_contributors/collection_reviewing.html)
-* [Ansible development guide](https://docs.ansible.com/ansible/devel/dev_guide/index.html)
-* [Ansible collection development guide](https://docs.ansible.com/ansible/devel/dev_guide/developing_collections.html#contributing-to-collections)
 
 ## Collection maintenance
 
@@ -98,51 +65,58 @@ Every voice is important. If you have something on your mind, create an issue or
 
 Before using this collection, you need to install it with the Ansible Galaxy command-line tool:
 ```bash
-ansible-galaxy collection install NAMESPACE.COLLECTION_NAME
+ansible-galaxy collection install kbd_interactive.aosswitch
 ```
 
 You can also include it in a `requirements.yml` file and install it with `ansible-galaxy collection install -r requirements.yml`, using the format:
 ```yaml
 ---
 collections:
-  - name: NAMESPACE.COLLECTION_NAME
+  - name: kbd_interactive.aosswitch
 ```
 
 Note that if you install the collection from Ansible Galaxy, it will not be upgraded automatically when you upgrade the `ansible` package. To upgrade the collection to the latest available version, run the following command:
 ```bash
-ansible-galaxy collection install NAMESPACE.COLLECTION_NAME --upgrade
+ansible-galaxy collection install kbd_interactive.aosswitch --upgrade
 ```
 
 You can also install a specific version of the collection, for example, if you need to downgrade when something is broken in the latest version (please report an issue in this repository). Use the following syntax to install version `0.1.0`:
 
 ```bash
-ansible-galaxy collection install NAMESPACE.COLLECTION_NAME:==0.1.0
+ansible-galaxy collection install kbd_interactive.aosswitch:==0.1.0
 ```
 
 See [using Ansible collections](https://docs.ansible.com/ansible/devel/user_guide/collections_using.html) for more details.
 
+## Contributing to this collection
+
+We welcome contributions to this collection. If you find problems, please open an issue or create a PR against the [Keyboard-interactive ArubaOS-Switch repository](https://github.com/evajust/kbd_interactive.aosswitch).
+
+You can also join us on:
+
+- [Discord](https://discord.gg/U7u9qYpNph)
+
+### Code of Conduct
+
+This collection follows the Ansible project's
+[Code of Conduct](https://docs.ansible.com/ansible/devel/community/code_of_conduct.html).
+Please read and familiarize yourself with this document.
+
 ## Release notes
 
-See the [changelog](https://github.com/ansible-collections/REPONAMEHERE/tree/main/CHANGELOG.rst).
+<!--Add a link to a changelog.md file or an external docsite to cover this information. -->
 
-## Roadmap
-
-<!-- Optional. Include the roadmap for this collection, and the proposed release/versioning strategy so users can anticipate the upgrade/update cycle. -->
+Release notes are available [here](https://github.com/evajust/kbd_interactive.aosswitch/blob/main/CHANGELOG.rst).
 
 ## More information
 
-<!-- List out where the user can find additional information, such as working group meeting times, slack/IRC channels, or documentation for the product this collection automates. At a minimum, link to: -->
-
-- [Ansible user guide](https://docs.ansible.com/ansible/devel/user_guide/index.html)
-- [Ansible developer guide](https://docs.ansible.com/ansible/devel/dev_guide/index.html)
-- [Ansible collections requirements](https://docs.ansible.com/ansible/devel/community/collection_contributors/collection_requirements.html)
-- [Ansible community Code of Conduct](https://docs.ansible.com/ansible/devel/community/code_of_conduct.html)
-- [The Bullhorn (the Ansible contributor newsletter)](https://docs.ansible.com/ansible/devel/community/communication.html#the-bullhorn)
-- [Important announcements for maintainers](https://github.com/ansible-collections/news-for-maintainers)
+- [Ansible network resources](https://docs.ansible.com/ansible/latest/network/getting_started/network_resources.html)
+- [Ansible Collection Overview](https://github.com/ansible-collections/overview)
+- [Ansible User guide](https://docs.ansible.com/ansible/latest/user_guide/index.html)
+- [Ansible Developer Guide](https://docs.ansible.com/ansible/latest/dev_guide/index.html)
+- [Ansible Community Code of Conduct](https://docs.ansible.com/ansible/latest/community/code_of_conduct.html)
 
 ## Licensing
-
-<!-- Include the appropriate license information here and a pointer to the full licensing details. If the collection contains modules migrated from the ansible/ansible repo, you must use the same license that existed in the ansible/ansible repo. See the GNU license example below. -->
 
 GNU General Public License v3.0 or later.
 
